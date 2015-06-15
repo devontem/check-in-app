@@ -1,0 +1,9 @@
+<div class="table">
+    <ul>
+        <li class="branding"><a ng-href="#/">checkIn App</a></li>
+        <li><a ng-show="currentUser" ng-href="#/meetings">Meetings ({{howManyMeetings}})</a></li>
+        <li><a ng-hide="currentUser" ng-href="#/login">Login</a></li>
+        <li><a ng-hide="currentUser" ng-href="#/register">Register</a></li>
+        <li ng-controller="StatusController"><a ng-show="currentUser" ng-click="logout()" ng-href="#/logout">Log Out</a></li>
+    </ul>
+</div>

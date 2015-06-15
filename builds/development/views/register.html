@@ -1,0 +1,17 @@
+<section class="register"> <!-- turns off auto browswer validation -->
+    <form name="myForm" ng-submit="register()">
+        <h1>Register to begin!</h1>
+        
+         <p class="error formerror" ng-show"message">{{message}}</p>
+        
+        <input type="text" name="firstname" placeholder="First Name" ng-model="user.firstname" ng-required="true">
+        <input type="text" name="lastnamed" placeholder="Last Name" ng-model="user.lastname" ng-required="true">
+        
+        <input type="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true" autofocus>
+
+        <input type="password" name="password" placeholder="Password" ng-model="user.password" ng-required="true">
+
+        <button class="btn" type="submit">Register</button>
+        <p>or <a href="#/login">Login</a></p>
+    </form>
+</section>

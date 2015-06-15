@@ -1,0 +1,25 @@
+<section class="meetings cf">
+    
+    <h1>Add Meeting</h1>
+    <form action="" class="formgroup addmeeting cf" name="myform" ng-submit="addMeeting()">
+        <div class="inputwrapper">
+            <input type="text" name="meetingname" placeholder="Meeting name" ng-model="meetingname" ng-required="true">
+        </div>    
+        <button type="submit" class="btn">+</button>
+    </form>
+    
+    
+    <h2>Your Meetings</h2>
+    <div class="meeting" ng-repeat="(key, meeting) in meetings">
+        <button class="btn btn-delete tooltip" ng-click="deleteMeeting(key)">
+            <span>Delete this button</span>
+        </button>
+        <a ng-href="#/checkins/{{currentUser.regUser}}/{{key}}" class="btn btn-checkin tooltip" >
+            <span>Got\to check-in URL!</span>
+        </a>
+        <a ng-href="#/checkins/{{currentUser.regUser}}/{{key}}/checkinsList" class="btn btn-list tooltip" >
+            <span>View List of Checked in users</span>
+        </a>
+        <span class="text">{{meeting.name}}</span><!-- Meeting List -->
+    </div>
+</section>

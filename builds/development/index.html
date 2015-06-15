@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app='myApp'>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Angular Data</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='"https://fonts.googleapis.com/css?family=Bree+Serif|Merriweather:400,300,700,900|Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="js/lib/angular/angular.min.js"></script>
+  <script src="js/lib/angular/angular-route.min.js"></script>
+  <script src="js/lib/angular/angular-animate.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.1.0/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/0.9.1/angularfire.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers/registration.js"></script>
+  <script src="js/controllers/status.js"></script>
+  <script src="js/controllers/meetings.js"></script>
+  <script src="js/controllers/checkins.js"></script>
+  <script src="js/services/authentication.js"></script>
+  <script src="js/services/countmeetings.js"></script>
+</head>
+<body>
+  <!-- NAV BAR -->
+  <nav class="cf" ng-include="'views/nav.html'"></nav>
+  
+  <!--  INTRO TEXT  -->
+  <div class="userinfo" ng-show="currentUser">
+    <span class="userinfo">Welcome to the site, {{currentUser.firstname }}!</span>
+
+  </div>
+  
+<div class="page">
+  <!-- page content -->
+  <main class="cf" ng-view>
+  
+  </main>
+</div>
+</body>
+</html>

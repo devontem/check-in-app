@@ -1,0 +1,15 @@
+<section class="sections cf"> <!-- turns off auto browswer validation -->
+    <form name="myForm" ng-submit="addCheckin()">
+        <h1>Fill out this form to check in or go!</h1>
+        
+         <p class="error formerror" ng-show"message">{{message}}</p>
+        
+        <input type="text" name="firstname" placeholder="First Name" ng-model="firstname" ng-required="true">
+        <input type="text" name="lastnamed" placeholder="Last Name" ng-model="lastname" ng-required="true">
+        <input type="email" name="email" placeholder="Email" ng-model="email" ng-required="true" autofocus>
+
+
+        <button class="btn" type="submit">Check In</button>
+        <p>or <a href="#/login">Login</a></p>
+    </form>
+</section>
